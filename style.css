@@ -6,4 +6,19 @@
   font-style: normal;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* align-content: center; */
+  background-color: #4dc971e8;
+  /* padding: 10px; */
+  width: 393px;
+  height: 110px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 10px;
+}
+
 /* Green: ##4DC971E8 */
