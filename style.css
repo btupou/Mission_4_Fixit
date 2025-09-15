@@ -16,9 +16,24 @@
   height: 110px;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  width: 393px;
+  /* height: 852px; */
+  /* background-color: beige; */
+}
+
 .button {
   cursor: pointer;
   padding: 10px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  width: 393px;
+  margin-top: 18px;
 }
 
 /* Green: ##4DC971E8 */
