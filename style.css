@@ -10,15 +10,27 @@
   display: flex;
   justify-content: space-between;
   /* align-content: center; */
-  background-color: #4dc971e8;
+  background-color: #4dc971;
   /* padding: 10px; */
   width: 393px;
   height: 110px;
 }
 
+.h2 {
+  color: #4dc971;
+  font-size: 20;
+  font-weight: bold;
+}
+
+.p {
+  font-size: 18px;
+  text-align: center;
+}
+
 .content {
   display: flex;
   justify-content: center;
+  text-align: center;
   width: 393px;
   /* height: 852px; */
   /* background-color: beige; */
