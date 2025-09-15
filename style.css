@@ -17,18 +17,20 @@
 }
 
 .h2 {
-  color: #4dc971e8;
+  color: #4dc971;
   font-size: 20;
   font-weight: bold;
 }
 
 .p {
   font-size: 18px;
+  text-align: center;
 }
 
 .content {
   display: flex;
   justify-content: center;
+  text-align: center;
   width: 393px;
   /* height: 852px; */
   /* background-color: beige; */
