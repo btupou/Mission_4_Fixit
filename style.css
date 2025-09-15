@@ -21,4 +21,11 @@
   padding: 10px;
 }
 
+.steps {
+  display: flex;
+  justify-content: center;
+  width: 393px;
+  margin-top: 18px;
+}
+
 /* Green: ##4DC971E8 */
