@@ -6,18 +6,44 @@
   font-style: normal;
 }
 
+/*  Emma Global Css */
+/* ---------- Page frame & card ---------- */
+:root {
+  --fixit-green: #4dc971;
+  --rail: #cfcfcf;
+  --bg: #f3f4f5;
+  --shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 393px;
+  min-height: 742px;
+  margin: 0 auto 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  padding-bottom: 18px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   /* align-content: center; */
-  background-color: #4dc971;
+  background-color: var(--fixit-green);
   /* padding: 10px; */
   width: 393px;
   height: 110px;
 }
 
 .h2 {
-  color: #4dc971;
+  color: var(--fixit-green);
   font-size: 20;
   font-weight: bold;
 }
@@ -31,12 +57,12 @@
   width: 140px;
   height: 130px;
   background-color: #fff;
-  border: 2px solid #4dc971;
-  /* background-color: #4dc971; */
+  border: 2px solid var(--fixit-green);
+  /* background-color: var(--fixit-green); */
   flex-shrink: 0;
   border-radius: 50%;
   stroke-width: 2px;
-  color: #4dc971;
+  color: var(--fixit-green);
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   font-size: 18px;
   font-style: normal;
@@ -47,8 +73,8 @@
 .circle-button-cta {
   width: 140px;
   height: 130px;
-  border: 2px solid #4dc971;
-  background-color: #4dc971;
+  border: 2px solid var(--fixit-green);
+  background-color: var(--fixit-green);
   flex-shrink: 0;
   border-radius: 50%;
   stroke-width: 2px;
@@ -86,8 +112,8 @@
   font-style: bold;
   text-align: center;
   border-radius: 20px;
-  border: 1px solid #4dc971;
-  color: #4dc971;
+  border: 1px solid var(--fixit-green);
+  color: var(--fixit-green);
   background: #fff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
@@ -118,20 +144,18 @@
   margin-top: 18px;
 }
 
+.back-next-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px; /* ← larger number = lower button */
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
 /* Emma CSS */
-
-/* ---------- Page frame & card ---------- */
-:root {
-  --fixit-green: #4dc971;
-  --rail: #cfcfcf;
-  --bg: #f3f4f5;
-  --shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
-}
-
-html,
-body {
-  background: var(--bg);
-}
+/* Emma CSS */
+/* Emma CSS */
+/* Emma CSS */
 
 .navbar {
   margin: 0 auto;
@@ -147,29 +171,19 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 393px;
-  min-height: 742px;
-  margin: 0 auto 24px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
-  padding-bottom: 18px;
-}
-
 /* ---------- Intro ---------- */
 .intro {
   text-align: center;
   padding: 6px 20px 0;
 }
+
 .welcome-title {
   color: #31b96c;
   font-weight: 800;
   font-size: 20px;
   margin: 6px 0 2px;
 }
+
 .question {
   margin: 0;
   font-size: 14px;
