@@ -32,6 +32,8 @@ body {
   padding-bottom: 18px;
 }
 
+/* navbar / contents and button css */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -91,8 +93,6 @@ body {
 
 .circle-button-cta:hover {
   cursor: pointer;
-  /* width: 150px; */
-  /* height: 140px; */
 }
 
 .content {
@@ -145,9 +145,9 @@ body {
 }
 
 .back-next-row {
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 80px; /* ← larger number = lower button */
   padding-left: 22px;
   padding-right: 22px;
 }
