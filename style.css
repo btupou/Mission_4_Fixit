@@ -60,7 +60,7 @@
 }
 
 .circle-button:hover {
-  background-color: #dfdfdf;
+  background-color: #f6fdf8;
 }
 
 .circle-button-cta:hover {
@@ -76,8 +76,6 @@
   text-align: center;
   width: 393px;
   padding: 20px;
-  /* height: 852px; */
-  /* background-color: beige; */
 }
 
 .pill-button {
@@ -96,7 +94,7 @@
 }
 
 .pill-button:hover {
-  background-color: #dfdfdf;
+  background-color: #f6fdf8;
 }
 
 .footer {
@@ -120,4 +118,118 @@
   margin-top: 18px;
 }
 
-/* Green: ##4DC971E8 */
+/* Emma CSS */
+
+/* ---------- Page frame & card ---------- */
+:root {
+  --fixit-green: #4dc971;
+  --rail: #cfcfcf;
+  --bg: #f3f4f5;
+  --shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+.navbar {
+  margin: 0 auto;
+  border-radius: 12px 12px 0 0;
+  width: 393px;
+}
+
+.step-caption {
+  width: 393px;
+  margin: 10px auto 6px;
+  color: #b6b6b6;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 393px;
+  min-height: 742px;
+  margin: 0 auto 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  padding-bottom: 18px;
+}
+
+/* ---------- Intro ---------- */
+.intro {
+  text-align: center;
+  padding: 6px 20px 0;
+}
+.welcome-title {
+  color: #31b96c;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 6px 0 2px;
+}
+.question {
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+/* -------6 circle buttons ---------- */
+.issue-grid {
+  width: 100%;
+  padding: 10px 18px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  justify-items: center;
+}
+
+.issue-btn {
+  width: 140px;
+  height: 130px;
+  background: #fff;
+  color: var(--fixit-green);
+  border: 2px solid var(--fixit-green);
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  padding: 0 10px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+.issue-btn.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Next button ---------- */
+.cta-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px; /* ← larger number = lower button */
+}
+
+.btn-next {
+  min-width: 120px;
+  height: 42px;
+  background: #fff;
+  color: var(--fixit-green);
+  border: 2px solid var(--fixit-green);
+  border-radius: 22px;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+}
+.btn-next:hover {
+  background: #f6fdf8;
+}
+
+/* selected state for Next button- reverse colours */
+.btn-next.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  border-color: var(--fixit-green);
+  box-shadow: var(--shadow);
+}
