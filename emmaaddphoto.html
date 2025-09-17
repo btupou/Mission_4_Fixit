@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fixit</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="emmastyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
+    <script src="emmascript.js" defer></script>
   </head>
 
-  <!-- Tell JS where Back and Next should go for THIS page -->
- <body data-back="index.html" data-next="screen3.html">
-
-    <!-- navbar -->
+     <!-- navbar -->
     <nav class="navbar">
       <img src="./images/hamburger.png" alt="hamburger button" class="button" />
       <img src="./images/Logo.png" alt="Fixit Logo" class="button" />
@@ -32,8 +29,12 @@
         <img src="./images/step_02.png" alt="step 2 of 9" />
       </section>
 
+ <!-- Where back and next buttons take you to -->
+<body id="emmaaddphoto.html" data-back="emmaissue.html" data-next="emmauploadphoto.html">
+
+
       <!-- Add Photo intro -->
-      <section class="intro">
+      <body><section class="intro">
         <h2 class="welcome-title">Add Photo<br><br></h2>
         <p class="question">
           Snap a photo of the issue to help us see exactly what's going on.<br><br>
@@ -43,26 +44,34 @@
         </p>
       </section>
 
-      <!-- Three upload photo circle buttons -->
-      <section class="issue-grid issue-grid--actions">
-        <button class="issue-btn is-selected" data-action="upload">
-          <img src="./images/upload_icon.png" alt="" style="width:32px; display:block; margin:0 auto 6px;" />
-          Upload a Photo
-        </button>
-        <button class="issue-btn" data-action="camera">
-          <img src="./images/camera_icon.png" alt="" style="width:32px; display:block; margin:0 auto 6px;" />
-          Take Photo
-        </button>
-        <button class="issue-btn" data-action="skip">
-          Continue<br />without Photo
-        </button>
-      </section>
 
-      <!-- Back / Next buttons (no inline styles) -->
+
+<!-- Three upload photo circle buttons -->
+<section class="issue-grid issue-grid--actions">
+  <button class="issue-btn" data-action="upload">
+    Upload a Photo
+    <img src="./images/uploadphotogreen_icon.png" alt="Upload icon" class="btn-icon" />
+  </button>
+
+  <button class="issue-btn" data-action="camera">
+    Take Photo
+    <img src="./images/takephoto_icon.png" alt="Camera icon" class="btn-icon" />
+  </button>
+
+  <button class="issue-btn" data-action="skip">
+    Continue<br />without Photo
+  </button>
+</section>
+
+
+      <!-- Back / Next buttons -->
       <section class="cta-row two-buttons">
         <button id="backBtn" class="btn-next" type="button">Back</button>
         <button id="nextBtn" class="btn-next" type="button">Next</button>
       </section>
+
+       
+
     </main>
 
     <footer class="footer-empty"></footer>

@@ -1,0 +1,463 @@
+* {
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  font-family: "poppins-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4dc971;
+  width: 393px;
+  height: 110px;
+}
+
+.h2 {
+  color: #4dc971;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.circle-button {
+  width: 140px;
+  height: 130px;
+  background-color: #fff;
+  border: 2px solid #4dc971;
+  /* background-color: #4dc971; */
+  flex-shrink: 0;
+  border-radius: 50%;
+  stroke-width: 2px;
+  color: #4dc971;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.circle-button-cta {
+  width: 140px;
+  height: 130px;
+  border: 2px solid #4dc971;
+  background-color: #4dc971;
+  flex-shrink: 0;
+  border-radius: 50%;
+  stroke-width: 2px;
+  color: #fff;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.circle-button:hover {
+  background-color: #dfdfdf;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 393px;
+  padding: 20px;
+}
+
+.pill-button {
+  width: 112px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #4dc971;
+  color: #4dc971;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.pill-button:hover {
+  background-color: #dfdfdf;
+}
+
+.pill-button.selected {
+  background-color: #4dc971;
+  color: #fff;
+  border-color: #4dc971;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 393px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  width: 393px;
+  margin-top: 18px;
+}
+
+/* Green: ##4DC971E8 */
+
+/* ---------- Page frame & card/white screen ---------- */
+:root {
+  --fixit-green: #4dc971;
+  --rail: #cfcfcf;
+  --bg: #f3f4f5;
+  --shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+.navbar {
+  margin: 0 auto;
+  border-radius: 12px 12px 0 0;
+  width: 393px;
+}
+
+.step-caption {
+  width: 393px;
+  margin: 10px auto 6px;
+  color: #b6b6b6;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 393px;
+  min-height: 742px;
+  margin: 0 auto 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  padding-bottom: 18px;
+}
+
+/* ---------- Intro ---------- */
+.intro {
+  text-align: center;
+  padding: 6px 20px 0;
+}
+.welcome-title {
+  color: #31b96c;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 6px 0 2px;
+}
+.question {
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+/* -------6 circle buttons ---------- */
+.issue-grid {
+  width: 100%;
+  padding: 10px 18px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 130px;
+  gap: 22px;
+  justify-items: center;
+}
+
+/* Turn icon white when the button is selected */
+.issue-btn.is-selected img.btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Center the icon below the text inside issue buttons */
+.issue-btn {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.issue-btn img.btn-icon {
+  width: 28px;              
+  margin-top: 6px;         
+}
+
+
+.issue-btn {
+  width: 140px;
+  height: 130px;
+  background: #fff;
+  color: var(--fixit-green);
+  border: 2px solid var(--fixit-green);
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  padding: 0 10px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+
+.issue-btn.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+/* Next and back button - if just one button*/
+.cta-row {
+  display: flex;
+  justify-content: center;   
+}
+
+/* Back + Next layout (if there are 2x buttons) */
+.cta-row.two-buttons {
+  justify-content: space-between;
+}
+
+.btn-next {
+  min-width: 120px;
+  height: 42px;
+  background: #fff;
+  color: var(--fixit-green);
+  border: 2px solid var(--fixit-green);
+  border-radius: 22px;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+}
+.btn-next:hover {
+  background: #f6fdf8;
+}
+
+/* selected state for Next button- reverse colours */
+.btn-next.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  border-color: var(--fixit-green);
+  box-shadow: var(--shadow);
+}
+
+/* Add Photo Screen */
+.issue-grid--actions {
+  width: 100%;
+  padding: 60px 18px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  justify-items: center;
+}
+
+/* Position the back and next buttons consistently */
+.cta-row {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 160px;
+}
+
+/* When a page has Back + Next */
+.cta-row.two-buttons {
+  justify-content: space-between;
+}
+
+/* When there are 3 buttons, make the last button stretch */
+.issue-grid--actions button:last-child {
+  grid-column: span 2;
+}
+
+.question b,
+.question strong {
+  font-weight: 700;
+}
+.upload strong {
+  font-weight: 700;
+}
+
+/* extra styling */
+.divider-or {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+  color: #777;
+  font-size: 14px;
+}
+.divider-or span {
+  padding: 0 8px;
+}
+.address-img {
+  display: block;
+  width: 90%;
+  max-width: 350px;
+  margin: 12px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* selected state for circle button: green bg + white text */
+.circle-button.is-selected {
+  background-color: var(--fixit-green);
+  color: #fff;
+  border-color: var(--fixit-green);
+}
+
+/* keep it green even on hover (prevent grey) */
+.circle-button.is-selected:hover {
+  background-color: var(--fixit-green);
+  color: #fff;
+}
+
+/* ===== Describe the Location radio buttons: little circles ===== */
+.surface-form {
+  padding: 0 18px;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  margin: 10px 0 18px;
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* hide default radio but keep accessible */
+.choice input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* circle outline for radio buttons */
+.choice .dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--fixit-green, #4dc971);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+/* green when selected */
+.choice input[type="radio"]:checked + .dot {
+  background: var(--fixit-green, #4dc971);
+  border-color: var(--fixit-green, #4dc971);
+}
+
+/* bold text when selected */
+.choice input[type="radio"]:checked + .dot + .choice-text {
+  font-weight: 700;
+  color: #222;
+}
+
+.extra-info {
+  margin-top: 8px;
+}
+
+/* ===== Consistent text sizing for all pages ===== */
+
+/* Base size for all body text */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+
+/* Green section heading: a bit larger */
+.welcome-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--fixit-green, #4dc971);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Smaller text same size */
+.question,
+.choice-text,
+.extra-info p,
+.details-box,
+.details-img,
+p,
+label,
+input,
+textarea,
+button {
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+}
+
+/* ===== center buttons on home_page ===== */
+body#home_page .issue-grid.issue-grid--actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 400px;
+}
+
+/* Fixed screen size for all pages === */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg, #f3f4f5);
+}
+
+/* Stack navbar (top) and screen (below), centered horizontally */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fixed heigh and width for screen below nav bar */
+.card {
+  width: 393px;
+  height: calc(742px - 110px);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+/* Keep Back/Next row at the bottom */
+.card > .cta-row {
+  margin-top: auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card > .cta-row.two-buttons {
+  justify-content: space-between;
+}

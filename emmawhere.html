@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixit</title>
+
+    <link rel="stylesheet" href="emmastyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="emmascript.js" defer></script>
+  </head>
+
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <img src="./images/hamburger.png" alt="hamburger button" class="button" />
+      <img src="./images/Logo.png" alt="Fixit Logo" class="button" />
+      <img src="./images/Profile_Button.png" alt="log in button" class="button" />
+    </nav>
+
+    <!-- phone card -->
+    <main class="card">
+      <!-- Progress bar step image -->
+      <section class="steps">
+        <img src="./images/step_03.png" alt="step 3 of 9" />
+      </section>
+
+         <!-- Where Next button should go for THIS page -->
+<body id="emmawhere.html" data-back="emmauploadphoto.html" data-next="emmadescribe.html"></body>
+
+ <!-- Where Back and Next should go for THIS page -->
+ <body data-back="emmauploadphoto.html" data-next="emmadescribe.html">
+
+      <!-- Location of the Issue -->
+<section class="intro">
+  <h2 class="welcome-title">Where is the issue?<br><br></h2>
+  <p class="question">Please mark the location on the below map</p><br><br>
+</section>
+
+<!-- Map circle button -->
+<section class="content">
+  <button class="issue-btn" id="openMapBtn">
+    Open Map
+    <img src="./images/map_icon.png" alt="Map icon" class="btn-icon" />
+  </button>
+</section>
+
+
+
+<section class="intro">
+  <p class="question">OR <br> <p>Enter a postcode, street name or park</p><br>
+
+<!-- image for the address part --> <br>
+  <img src="./images/address_details.png" alt="Address details image" class="address-img" />
+</section>
+      <!-- Back / Next buttons -->
+      <section class="cta-row two-buttons">
+        <button id="backBtn" class="btn-next" type="button">Back</button>
+        <button id="nextBtn" class="btn-next" type="button">Next</button>
+      </section>
+
+
+    </main>
+
+    <footer class="footer-empty"></footer>
+  </body>
+</html>
