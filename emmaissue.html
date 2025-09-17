@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixit</title>
+
+    <link rel="stylesheet" href="emmastyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="emmascript.js" defer></script>
+  </head>
+
+   <!-- Where Next button should go for THIS page -->
+<body id="emmaissue.html" data-back="home_page.html" data-next="emmaaddphoto.html"></body>
+
+       <!-- navbar -->
+    <nav class="navbar">
+      <img src="./images/hamburger.png" alt="hamburger button" class="button" />
+      <img src="./images/Logo.png" alt="Fixit Logo" class="button" />
+      <img src="./images/Profile_Button.png" alt="log in button" class="button" />
+    </nav>
+
+    <!-- phone card -->
+    <main class="card">
+    
+    <!-- Progress bar step image -->
+    <section class="steps">
+  <img
+    src="./images/step_01.png"
+    alt="step 1 of 9"
+    
+  />
+</section>
+
+
+      <!-- welcome + heading  -->
+      <section class="intro">
+        <h2 class="welcome-title">Welcome!<br><br></h2>
+        <p class="question">What is the issue you would like to submit?<br><br></bt></p>
+      </section>
+
+      <!-- six circle buttons -->
+      <section class="issue-grid">
+        <button class="issue-btn" data-issue="Rubbish">Rubbish</button>
+        <button class="issue-btn" data-issue="Pests and Rodents">Pests and<br />Rodents</button>
+
+        <button class="issue-btn" data-issue="Smoke or Bonfire">Smoke or<br />Bonfire</button>
+        <button class="issue-btn is-selected" data-issue="Graffiti">Graffiti</button>
+
+        <button class="issue-btn" data-issue="Water and Drainage">Water and<br />Drainage</button>
+        <button class="issue-btn" data-issue="Other">Other</button>
+      </section>
+
+      <!-- next button -->
+      <section class="cta-row two-buttons">
+        <button id="backBtn" class="btn-next" type="button">Back</button>
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
+
+       
+      </section>
+
+       
+    </main>
+
+    <footer class="footer-empty"></footer>
+  </body>
+</html>
