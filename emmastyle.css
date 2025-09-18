@@ -30,7 +30,6 @@
   height: 130px;
   background-color: #fff;
   border: 2px solid #4dc971;
-  /* background-color: #4dc971; */
   flex-shrink: 0;
   border-radius: 50%;
   stroke-width: 2px;
@@ -112,8 +111,6 @@
   width: 393px;
   margin-top: 18px;
 }
-
-/* Green: ##4DC971E8 */
 
 /* ---------- Page frame & card/white screen ---------- */
 :root {
@@ -200,7 +197,6 @@ body {
   width: 28px;              
   margin-top: 6px;         
 }
-
 
 .issue-btn {
   width: 140px;
@@ -460,4 +456,26 @@ body {
 
 .card > .cta-row.two-buttons {
   justify-content: space-between;
+}
+
+/* Move Yes/No radio group slightly to the right on the About page only */
+body#emmabout .choice-grid {
+  margin-left: 50px;   
+}
+
+/* === Allow multiple selections but keep the round dot look === */
+.choice input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice input[type="checkbox"]:checked + .dot {
+  background: var(--fixit-green, #4dc971);
+  border-color: var(--fixit-green, #4dc971);
+}
+
+.choice input[type="checkbox"]:checked + .dot + .choice-text {
+  font-weight: 700;
+  color: #222;
 }

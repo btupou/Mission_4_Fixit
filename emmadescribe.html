@@ -15,9 +15,8 @@
     <script src="emmascript.js" defer></script>
   </head>
 
-   <!-- Where back and next buttons take you to -->
-<body id="emmadescribe.html" data-back="emmawhere.html" data-next="emmabout.html">
-
+  <!-- Where back and next buttons take you to -->
+  <body id="emmadescribe" data-back="emmawhere.html" data-next="emmabout.html">
     <!-- navbar -->
     <nav class="navbar">
       <img src="./images/hamburger.png" alt="hamburger button" class="button" />
@@ -38,44 +37,41 @@
         <p class="question"><br>What type of surface is the graffiti on</p><br>
       </section>
 
-      <!-- Surface options- small radio buttons to select from -->
-      
+      <!-- Surface options - round multiple-select circles -->
       <form class="surface-form" aria-labelledby="surface-title">
-               <div class="choice-grid" id="surface-group">
-
-          <!-- Option buttons -->
+        <div class="choice-grid" id="surface-group">
           <label class="choice">
-            <input type="radio" name="surface" value="sign" />
+            <input type="checkbox" name="surface" value="sign" />
             <span class="dot" aria-hidden="true"></span>
             <span class="choice-text">Sign</span>
           </label>
 
           <label class="choice">
-            <input type="radio" name="surface" value="art_mural" />
+            <input type="checkbox" name="surface" value="art_mural" />
             <span class="dot" aria-hidden="true"></span>
             <span class="choice-text">Art or mural</span>
           </label>
 
           <label class="choice">
-            <input type="radio" name="surface" value="road_footpath" />
+            <input type="checkbox" name="surface" value="road_footpath" />
             <span class="dot" aria-hidden="true"></span>
             <span class="choice-text">Road or footpath</span>
           </label>
 
           <label class="choice">
-            <input type="radio" name="surface" value="bridge" />
+            <input type="checkbox" name="surface" value="bridge" />
             <span class="dot" aria-hidden="true"></span>
             <span class="choice-text">Bridge</span>
           </label>
 
           <label class="choice">
-            <input type="radio" name="surface" value="wall" />
+            <input type="checkbox" name="surface" value="wall" />
             <span class="dot" aria-hidden="true"></span>
             <span class="choice-text">Wall</span>
           </label>
 
           <label class="choice">
-            <input type="radio" name="surface" value="general" />
+            <input type="checkbox" name="surface" value="general" />
             <span class="dot" aria-hidden="true"></span>
             <span class="choice-text">General graffiti</span>
           </label>
@@ -91,7 +87,7 @@
         </div>
       </form>
 
-      <!-- Back / Next -->
+      <!-- Back / Next buttons -->
       <section class="cta-row two-buttons">
         <button id="backBtn" class="btn-next" type="button">Back</button>
         <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
