@@ -64,50 +64,55 @@
         <h2 class="h2">Create an account</h2>
       </section>
 
+
+      <!-- form content -->
       <section class="form-area">
-        <form class="form">
-          <p class="p-left">
-            <label for="fname">First name:</label><br />
+        <form class="form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="fname">Full Name *</label>
             <input
               type="text"
               id="fname"
               name="fname"
               class="form-input"
-            /><br />
-          </p>
+              required
+            />
+          </div>
 
-          <p class="p-left">
-            <label for="lname">Last name:</label><br />
+          <div class="form-group">
+            <label for="lname">Last name:</label>
             <input
               type="text"
               id="lname"
               name="lname"
-
               class="form-input"
-            /><br />
-          </p>
+              required
+            />
+          </div>
 
-          <p class="p-left">
-            <label for="pnumber">Phone number:</label><br />
+          <div class="form-group">
+            <label for="pnumber">Phone number*</label>
             <input
               type="number"
               id="pnumber"
               name="pnumber"
               class="form-input"
-            /><br />
-          </p>
+              required
+            />
+          </div>
 
-          <p class="p-left">
-            <label for="email">Email:</label><br />
+          <div class="form-group">
+            <label for="email">Email:</label>
             <input
               type="email"
               id="email"
               name="email"
               class="form-input"
-            /><br />
-          </p>
+              required
+            />
+          </div>
 
-          <p class="p-left"><input type="checkbox" id="terms" name="terms">I agree to terms and conditions</input></p>
+          <div class="form-group"><input type="checkbox" id="terms" name="terms">I agree to terms and conditions</input></div>
 
         </form>
 </section>
