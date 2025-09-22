@@ -25,7 +25,7 @@
       rel="stylesheet"
     />
     <script
-      src="script.js"
+      src="form.js"
       defer
     ></script>
   </head>
@@ -54,8 +54,8 @@
       <!-- steps -->
       <section class="steps">
         <img
-          src="./images/steps_08.png"
-          alt="step 6 of 10"
+          src="./images/steps_09.png"
+          alt="step 6 of 7"
         />
       </section>
 
@@ -67,7 +67,7 @@
 
       <!-- form content -->
       <section class="form-area">
-        <form class="form" id="contactForm" novalidate>
+        <form class="form" id="createAccount" novalidate>
           <div class="form-group">
             <label for="fname">Full Name *</label>
             <input
@@ -80,18 +80,18 @@
           </div>
 
           <div class="form-group">
-            <label for="lname">Last name:</label>
+            <label for="email">Email *</label>
             <input
-              type="text"
-              id="lname"
-              name="lname"
+              type="email"
+              id="email"
+              name="email"
               class="form-input"
               required
             />
           </div>
 
           <div class="form-group">
-            <label for="pnumber">Phone number*</label>
+            <label for="pnumber">Phone Number *</label>
             <input
               type="number"
               id="pnumber"
@@ -102,20 +102,22 @@
           </div>
 
           <div class="form-group">
-            <label for="email">Email:</label>
+            <label for="pword">Password *</label>
             <input
-              type="email"
-              id="email"
-              name="email"
+              type="password"
+              id="pword"
+              name="pword"
               class="form-input"
               required
             />
           </div>
 
-          <div class="form-group"><input type="checkbox" id="terms" name="terms">I agree to terms and conditions</input></div>
+          <div class="form-input">
+            <input type="checkbox" id="terms" name="terms">I agree to terms and conditions</input>
+          </div>
 
         </form>
-</section>
+      </section>
 
       <!-- back / next button -->
       <section class="back-next-row">
