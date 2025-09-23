@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*  Emma Global Css */
 /* ---------- Page frame & card ---------- */
 :root {
@@ -215,7 +219,7 @@ body {
   border-radius: 20px;
   background-color: var(--fixit-green);
   align-self: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .form-area img {
