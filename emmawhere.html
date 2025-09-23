@@ -15,7 +15,9 @@
     <script src="emmascript.js" defer></script>
   </head>
 
-
+  <!-- Where Next button should go for THIS page -->
+  <body id="emmawhere" data-back="emmauploadphoto.html" data-next="emmadescribe.html">
+    
     <!-- navbar -->
     <nav class="navbar">
       <img src="./images/hamburger.png" alt="hamburger button" class="button" />
@@ -27,44 +29,37 @@
     <main class="card">
       <!-- Progress bar step image -->
       <section class="steps">
-        <img src="./images/step_03.png" alt="step 3 of 9" />
+        <img src="./images/step_03.png" alt="step 3 of 7" />
       </section>
 
-         <!-- Where Next button should go for THIS page -->
-<body id="emmawhere.html" data-back="emmauploadphoto.html" data-next="emmadescribe.html"></body>
-
- <!-- Where Back and Next should go for THIS page -->
- <body data-back="emmauploadphoto.html" data-next="emmadescribe.html">
-
+      
       <!-- Location of the Issue -->
-<section class="intro">
-  <h2 class="welcome-title">Where is the issue?<br><br></h2>
-  <p class="question">Please mark the location on the below map</p><br><br>
-</section>
+      <section class="intro">
+        <h2 class="welcome-title">Where is the issue?<br><br></h2>
+        <p class="question">Please mark the location on the below map</p>
+      </section>
 
-<!-- Map circle button -->
-<section class="content">
-  <button class="issue-btn" id="openMapBtn">
-    Open Map
-    <img src="./images/map_icon.png" alt="Map icon" class="btn-icon" />
-  </button>
-</section>
+      <!-- Map circle button -->
+      <section class="content">
+        <button class="issue-btn" id="openMapBtn">
+          Open Map
+          <img src="./images/map_icon.png" alt="Map icon" class="btn-icon" />
+        </button>
+      </section>
 
+      <section class="intro">
+        <p class="question">OR</p>
+        <p class="question">Enter a postcode, street name or park</p>
 
+        <!-- image for the address part -->
+        <img src="./images/address_details.png" alt="Address details image" class="address-img" />
+      </section>
 
-<section class="intro">
-  <p class="question">OR <br> <p>Enter a postcode, street name or park</p><br>
-
-<!-- image for the address part --> <br>
-  <img src="./images/address_details.png" alt="Address details image" class="address-img" />
-</section>
       <!-- Back / Next buttons -->
       <section class="cta-row two-buttons">
         <button id="backBtn" class="btn-next" type="button">Back</button>
-        <button id="nextBtn" class="btn-next" type="button">Next</button>
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
       </section>
-
-
     </main>
 
     <footer class="footer-empty"></footer>

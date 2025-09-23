@@ -15,7 +15,8 @@
     <script src="emmascript.js" defer></script>
   </head>
 
-
+  <!-- Where back and next buttons take you to -->
+  <body id="emmauploadphoto" data-back="emmaaddphoto.html" data-next="emmawhere.html">
     <!-- navbar -->
     <nav class="navbar">
       <img src="./images/hamburger.png" alt="hamburger button" class="button" />
@@ -27,11 +28,8 @@
     <main class="card">
       <!-- Progress bar step image -->
       <section class="steps">
-        <img src="./images/step_02.png" alt="step 2 of 9" />
+        <img src="./images/step_02.png" alt="step 2 of 7" />
       </section>
-
-         <!-- Where Next button should go for THIS page -->
-<body id="emmauploadphoto.html" data-back="emmaaddphoto.html" data-next="emmawhere.html"></body>
 
       <!-- Upload Photo text & instructions -->
       <section class="intro">
@@ -47,18 +45,17 @@
           You can upload a maximum of <strong>four photos.</strong>
         </p>
 
-        <p class="upload"><strong>Upload your photos below</strong><br><br><br></p>
+        <p class="upload"><strong>Upload your photos below</strong></p>
         <div class="upload-icon">
-          <img src="./images/upload_images.png" alt="Upload icon"/>
+          <img src="./images/upload_images.png" alt="Upload icon" />
         </div>
       </section>
 
       <!-- Back / Next buttons -->
       <section class="cta-row two-buttons">
         <button id="backBtn" class="btn-next" type="button">Back</button>
-        <button id="nextBtn" class="btn-next" type="button">Next</button>
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
       </section>
-
     </main>
 
     <footer class="footer-empty"></footer>

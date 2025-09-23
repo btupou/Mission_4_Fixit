@@ -7,16 +7,15 @@
 
     <link rel="stylesheet" href="emmastyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <script src="emmascript.js" defer></script>
   </head>
 
- <!-- Where back and next buttons take you to -->
-<body id="emmabout.html" data-back="emmadescribe.html" data-next="BENS_PAGE">
+ <!-- Where back and next buttons take you to on THIS page -->
+<body id="emmabout" data-back="emmadescribe.html" data-next="create-account.html">
 
  
     <!-- navbar -->
@@ -30,13 +29,13 @@
     <main class="card">
       <!-- Progress bar step image -->
       <section class="steps">
-        <img src="./images/step_05.png" alt="step 5 of 9" />
+        <img src="./images/step_05.png" alt="step 5 of 7" />
       </section>
 
       <!-- About the issue -->
       <section class="intro">
-        <h2 class="welcome-title">About the Graffiti</h2><br>
-        <p class="question">Is the graffiti offensive or racist?</p><br>
+        <h2 class="welcome-title">About the Graffiti</h2><br><br>
+        <p class="question">Is the graffiti offensive or racist?</p><br><br>
       </section>
 
       <!-- Yes or No options -->
@@ -60,18 +59,19 @@
         </div>
 
         <div class="extra-info">
-          <p class="question"><br><br>Can you describe the graffiti?</p><br><br>
+         <p class="question" style="margin-left:55px;"><br><br>Can you describe the graffiti?</p><br><br>
           <img src="./images/inputbox_issue_details.png"
                alt="Example of how to describe the graffiti details"
                class="details-img" />
         </div>
       </form>
 
-      <!-- Back / Next -->
-      <section class="cta-row two-buttons">
-        <button id="backBtn" class="btn-next" type="button">Back</button>
-        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
-      </section>
+     <!-- Back / Next buttons -->
+    <section class="cta-row two-buttons">
+  <button id="backBtn" class="btn-next" type="button">Back</button>
+  <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
+    </section>
+
     </main>
 
     <footer class="footer-empty"></footer>
