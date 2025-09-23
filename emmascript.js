@@ -1,13 +1,13 @@
 console.log('Fixit Mission 4 Connected ✅');
 
 document.addEventListener('DOMContentLoaded', () => {
-  // --- Back / Next navigation --------------
+  // --- Back / Next navigation ------------------------------------
   const backPage = document.body.dataset.back;
   const nextPage = document.body.dataset.next;
   const backBtn  = document.getElementById('backBtn');
   const nextBtn  = document.getElementById('nextBtn');
 
-  // --- Enable Next only after a required choice -------
+  // --- Enable Next only after a required choice ------------------
 // Find all possible things the user might select
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 const checkboxes   = document.querySelectorAll('input[type="checkbox"]'); // 🌟🌟allow multi-select pages
@@ -19,9 +19,9 @@ const issueButtons = document.querySelectorAll('.issue-btn'); // circle buttons
     if (!nextBtn) return;
 
     // If page has radio buttons, require one to be checked, 
-    // allow checkboxes: require at least one radio OR checkbox checked
+    // allow checkboxes: require at least one radio OR checkbox to be checked by user
     if (radioButtons.length > 0 || checkboxes.length > 0) {
-      // Only check the form on the page the user is currently viewing, so choices on other pages don’t affect this one.
+     // Look only at the form on THIS page to find checked circles or boxes
       const anyChecked = document.querySelector('.surface-form input[type="radio"]:checked, .surface-form input[type="checkbox"]:checked');
       nextBtn.disabled = !anyChecked;
     }
@@ -57,7 +57,7 @@ const issueButtons = document.querySelectorAll('.issue-btn'); // circle buttons
   // --- Circle buttons ---------------------
   // Make every .issue-btn turn green/white when clicked
   // and allow only one selected within each .issue-grid group,
-  // EXCEPT on the Describe page where users can select more than one surface choice if they want to.
+  // EXCEPT on the Describe page where users can select more than one surface choice.
   document.querySelectorAll('.issue-grid, .content').forEach(group => {
     const buttons = group.querySelectorAll('.issue-btn');
 

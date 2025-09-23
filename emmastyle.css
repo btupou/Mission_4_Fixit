@@ -218,7 +218,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* Next and back button - if just one button*/
+/* Next button - if just one button*/
 .cta-row {
   display: flex;
   justify-content: center;   
