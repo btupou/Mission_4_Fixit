@@ -215,6 +215,17 @@ body {
   border-radius: 20px;
   background-color: var(--fixit-green);
   align-self: center;
+  margin-top: 20px;
+}
+
+.form-area img {
+  display: flex;
+  justify-self: center;
+}
+
+.form-area h2 {
+  display: flex;
+  justify-self: center;
 }
 
 .form-group {
