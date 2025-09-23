@@ -124,7 +124,26 @@ body {
   cursor: pointer;
 }
 
+.pill-button-big {
+  width: 168px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: bold;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid var(--fixit-green);
+  color: var(--fixit-green);
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
 .pill-button:hover {
+  background-color: #f6fdf8;
+}
+
+.pill-button-big:hover {
   background-color: #f6fdf8;
 }
 
