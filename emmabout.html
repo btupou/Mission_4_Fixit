@@ -7,17 +7,16 @@
 
     <link rel="stylesheet" href="emmastyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />    <link
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <script src="emmascript.js" defer></script>
   </head>
 
- <!-- Where back and next buttons take you to on THIS page -->
-<body id="emmabout" data-back="emmadescribe.html" data-next="create-account.html">
-
- 
+  <!-- Where back and next buttons take you to -->
+  <body id="emmabout" data-back="emmadescribe.html" data-next="BENS_PAGE">
     <!-- navbar -->
     <nav class="navbar">
       <img src="./images/hamburger.png" alt="hamburger button" class="button" />
@@ -34,44 +33,52 @@
 
       <!-- About the issue -->
       <section class="intro">
-        <h2 class="welcome-title">About the Graffiti</h2><br><br>
-        <p class="question">Is the graffiti offensive or racist?</p><br><br>
-      </section>
+        <h2 class="welcome-title">About the Graffiti</h2>
+        <br /><br />
+        </section>
 
       <!-- Yes or No options -->
-      <form class="surface-form" aria-labelledby="surface-title">
-       
-        <div class="choice-grid" id="surface-group">
+<form class="surface-form">
+  <fieldset class="choice-fieldset">
+    <legend class="question">Is the graffiti offensive or racist?</legend>
 
-          <!-- Option buttons -->
-          <label class="choice">
-            <input type="radio" name="surface" value="Yes" />
-            <span class="dot" aria-hidden="true"></span>
-            <span class="choice-text">Yes</span>
-          </label>
+    <div class="choice-grid" id="surface-group">
+      <label class="choice">
+        <input type="radio" name="surface" value="Yes" />
+        <span class="dot" aria-hidden="true"></span>
+        <span class="choice-text">Yes</span>
+      </label>
 
-          <label class="choice">
-            <input type="radio" name="surface" value="No" />
-            <span class="dot" aria-hidden="true"></span>
-            <span class="choice-text">No</span>
-          </label>  
+      <label class="choice">
+        <input type="radio" name="surface" value="No" />
+        <span class="dot" aria-hidden="true"></span>
+        <span class="choice-text">No</span>
+      </label>
+    </div>
+  </fieldset>
 
-        </div>
+  <!-- Additional comments -->
+  <div class="extra-info">
+    <label for="details" class="question">Can you describe the graffiti?</label>
+    <textarea
+      id="details"
+      rows="4"
+      data-max="200"
+      placeholder="For example… the graffiti is blue and white spray-painted words including shapes and figures of people mixed in."
+    ></textarea>
+    <p class="question">
+      Characters: <span id="char-count">0</span>/200
+      <span id="char-msg" class="count-msg" aria-live="polite"></span>
+    </p>
+  </div>
+</form>
 
-        <div class="extra-info">
-         <p class="question" style="margin-left:55px;"><br><br>Can you describe the graffiti?</p><br><br>
-          <img src="./images/inputbox_issue_details.png"
-               alt="Example of how to describe the graffiti details"
-               class="details-img" />
-        </div>
-      </form>
 
-     <!-- Back / Next buttons -->
-    <section class="cta-row two-buttons">
-  <button id="backBtn" class="btn-next" type="button">Back</button>
-  <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
-    </section>
-
+      <!-- Back / Next buttons -->
+      <section class="cta-row two-buttons">
+        <button id="backBtn" class="btn-next" type="button">Back</button>
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
+      </section>
     </main>
 
     <footer class="footer-empty"></footer>
