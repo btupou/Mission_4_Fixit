@@ -121,6 +121,11 @@ body {
 .circle-button-cta:hover {
   cursor: pointer;
 }
+.circle-button.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
 
 .content {
   display: flex;
@@ -328,7 +333,8 @@ body {
 
 .form-input.error {
   border-color: #ff4444;
-  background-color: #fff5f5;
+  /* background-color: #fff5f5; */
+  background-color: #ffdbdb;
 }
 
 .form-input.success {
