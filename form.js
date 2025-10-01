@@ -15,11 +15,14 @@ function validateName(name) {
 }
 
 function validateEmail(email) {
+  // /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return emailPattern.test(email)
 }
 
 function validatePhone(phone) {
+  // 8 (landline) 9, 10 (mobile)
+  // https://stackoverflow.com/questions/9850428/regular-expression-to-validate-new-zealand-phone-numbers
   const phonePattern = /^[\d\s\-\+\(\)]{10,}$/
   return phonePattern.test(phone)
 }

@@ -10,7 +10,6 @@ a {
   text-decoration: none;
 }
 
-/*  Emma Global Css */
 /* ---------- Page frame & card ---------- */
 :root {
   --fixit-green: #4dc971;
@@ -55,7 +54,6 @@ body {
 }
 
 /* navbar / contents and button css */
-
 .navbar {
   margin: 0 auto;
   border-radius: 12px 12px 0 0;
@@ -274,6 +272,27 @@ body {
   display: flex;
   justify-self: center;
 }
+
+.form-area button {
+  font-size: 18px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: white;
+  /* border: var(--fixit-green); */
+  border-radius: 20px;
+  padding: 4px 12px 4px 12px;
+  /* color: var(--fixit-green); */
+  box-shadow: var(--shadow);
+}
+
+.form-area button:hover {
+  background-color: #f6fdf8;
+  cursor: pointer;
+}
+
+/* pill-button-small-stretch  */
 
 .form-group {
   display: flex;

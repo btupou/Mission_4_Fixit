@@ -14,16 +14,15 @@ nextBtn?.addEventListener('click', (e) => {
   nextBtn.classList.toggle('is-selected')
 })
 
-// Make the 6 cirle buttons clickable
-document.querySelectorAll('.issue-btn').forEach((button) => {
-  button.addEventListener('click', () => {
-    // Remove "is-selected" from all buttons
-    document
-      .querySelectorAll('.issue-btn')
-      .forEach((btn) => btn.classList.remove('is-selected'))
-    // Add "is-selected" to the clicked one
-    button.classList.add('is-selected')
+// document.querySelectorAll('.issue-btn').forEach((button) => {
+//   button.addEventListener('click', () => {
+//     // Remove "is-selected" from all buttons
+//     document
+//       .querySelectorAll('.issue-btn')
+//       .forEach((btn) => btn.classList.remove('is-selected'))
+//     // Add "is-selected" to the clicked one
+//     button.classList.add('is-selected')
 
-    console.log('Issue chosen:', button.dataset.issue)
-  })
-})
+//     console.log('Issue chosen:', button.dataset.issue)
+//   })
+// })
