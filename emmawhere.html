@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fixit</title>
 
+    <!-- ✅ Site-wide styles -->
     <link rel="stylesheet" href="emmastyle.css" />
+
+    <!-- ✅ Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +16,7 @@
       rel="stylesheet"
     />
 
-<!-- ✅ Leaflet map library -->
+    <!-- ✅ Leaflet map library -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -24,15 +27,13 @@
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
-      defer
     ></script>
 
-
+    <!-- ✅ Your scripts: core first, then page-specific -->
     <script src="emmascript.js" defer></script>
- 
+    <script src="emmageolocation.js" defer></script>
   </head>
 
-  <!-- Where Next button should go for THIS page -->
   <body id="emmawhere" data-back="emmauploadphoto.html" data-next="emmadescribe.html">
     <!-- navbar -->
     <nav class="navbar">
@@ -48,32 +49,34 @@
         <img src="./images/step_03.png" alt="step 3 of 7" />
       </section>
 
- <!-- Location of the Issue -->
+      <!-- Location of the Issue -->
       <section class="intro">
         <h2 class="welcome-title">Where is the issue?<br><br></h2>
         <p class="question">Please mark the location on the below map</p>
       </section>
 
-<!-- ✅ Using Web API feature: Geolocation
-     Find the user’s current location on a map -->
-<section class="intro">
-  <p class="question"><strong>Find my current location</strong></p><br>
-  <button id="locateBtn" class="circle-button issue-btn" type="button">Locate Me</button>
-  <p id="geo-error" class="question" style="color:#b00020;"></p>
-</section>
+      <!-- ✅ Geolocation feature -->
+      <section class="intro">
+        <p class="question"><strong>Find my current location</strong></p><br>
+        <button id="locateBtn" class="circle-button issue-btn" type="button">Locate Me</button>
+        <p id="geo-error" class="question" style="color:#b00020;"></p>
+      </section>
 
-<section class="map-wrap">
-  <div id="map" aria-label="Map showing your current location"></div>
-</section>
+      <!-- The map container (must have height set in CSS) -->
+      <section class="map-wrap">
+        <div id="map" aria-label="Map showing your current location"></div>
+      </section>
 
-<!-- manual option to input address -->
-    <section class="intro">
-  <p class="question"><strong>Or type an address</strong></p>
-  <input id="manual-address" type="text"
-         class="text-input"
-         placeholder="Start typing an address…">
-</section>
-
+      <!-- Manual option to input address -->
+      <section class="intro">
+        <p class="question"><strong>Or type an address</strong></p>
+        <input
+          id="manual-address"
+          type="text"
+          class="text-input"
+          placeholder="Start typing an address…"
+        />
+      </section>
 
       <!-- Back / Next buttons -->
       <section class="cta-row two-buttons">

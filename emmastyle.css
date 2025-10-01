@@ -556,7 +556,7 @@ body {
   align-items: center;
 }
 
-/* Fixed heigh and width for screen below nav bar
+/* Fixed height and width for screen below nav bar
    updated to responsive width & flexible height */
 .card {
   width: min(100%, var(--container-max));
@@ -670,6 +670,23 @@ body {
   margin: 0 auto 20px;
 }
 
+/* ✅ Bug fix: Leaflet needs a fixed height to render */
+#map { height: 320px; min-height: 320px; border-radius: 12px; overflow: hidden; }
+.leaflet-container img { max-width: none !important; }
+
+/* ✅ Bug fix: make character counter turn red when limit (200+) is exceeded */
+#char-count.count-error {
+  color: #d00;
+  font-weight: 600;
+}
+textarea.over-limit,
+.over-limit {
+  border: 2px solid #d00;
+  outline: 0;
+}
+
+
+
 /* ✅ Center the description/notes box on wide screens */
 .extra-info {
   /* center the whole section */
@@ -693,6 +710,19 @@ body {
   align-self: center;
   white-space: nowrap;
   margin-top: 4px;
+}
+
+/* ✅ Bug fix: make character counter turn red when limit (200+) is exceeded */
+#char-count.count-error { 
+  color: #d00 !important;
+  font-weight: 600;
+}
+
+/* Optional: visually flag the textarea when over limit */
+textarea.over-limit, 
+.over-limit {
+  border: 2px solid #d00 !important;
+  outline: 0;
 }
 
 /* ✅ Use basic accessibility features: Focus style: an outline for keyboard users */
