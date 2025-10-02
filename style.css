@@ -40,13 +40,13 @@ body {
 /* Responsive card */
 @media (min-width: 768px) {
   .card {
-    min-height: 900px;
+    min-height: 768px;
   }
 }
 
 @media (min-width: 1024px) {
   .card {
-    min-height: 1000px;
+    min-height: 768px;
   }
   .content-column {
     width: 900px;
