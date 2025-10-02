@@ -31,6 +31,9 @@
   </head>
 
   <body>
+<!-- Where back and next buttons take you to -->
+  <body id="contact-details" data-back="contact-details.html" data-next="submission.html">
+
     <!-- navbar -->
     <nav class="navbar">
       <img
@@ -73,15 +76,15 @@
       </section>
 
       <section class="content">
-        <button class="circle-button">Log In</button>
-        <button class="circle-button">
+        <button class="circle-button" data-page="log-in.html" title="log in button">Log In</button>
+        <button class="circle-button" data-page="create-account.html" title="create an account button">
           <!-- <a href="./create-account.html">Create an account</a> -->
           Create an account
         </button>
       </section>
 
       <section class="content">
-        <button class="circle-button">
+        <button class="circle-button" data-page="submission-no-account.html" title="continue as guest button">
           Continue <br />
           as a guest
         </button>
@@ -89,8 +92,8 @@
 
       <!-- back / next button -->
       <div class="back-next-row">
-        <button class="pill-button">Back</button>
-        <button class="pill-button">Next</button>
+        <button class="pill-button" id="back-button">Back</button>
+        <button class="pill-button" id="next-button">Next</button>
       </div>
     </main>
 
