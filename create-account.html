@@ -60,10 +60,18 @@
       </section>
 
       <!-- main content -->
-       <!-- TODO Fix "margin-top hack" -->
-      <section class="form-area" style="margin-top: 20px;">
+      <!-- TODO Fix "margin-top hack" -->
+      <section
+        class="form-area"
+        style="margin-top: 20px"
+      >
         <div>
-          <h2 class="h2" style="color: white;">Create an account</h2>
+          <h2
+            class="h2"
+            style="color: white"
+          >
+            Create an account
+          </h2>
           <p class="p">
             Access our online services with a FIXIT account for faster
             transactions and a dashboard to track your requests, applications,
@@ -78,30 +86,32 @@
       </section>
 
       <section class="content">
-        <button class="circle-button">
-          <a href="./create-an-account.html">
+        <button
+          class="circle-button"
+          data-page="create-an-account.html"
+          title="create an account button"
+        >
           Create <br />
           an account
-          </a>
         </button>
       </section>
 
       <!-- back / next button -->
-      <section class="back-next-row">
-        <!-- <button class="pill-button">Back</button> -->
-        <button button id="backBtn" class="pill-button" type="button">Back</button>
-        <button button id="nextBtn" class="pill-button" type="button">Next</button>
-        <!-- <button class="pill-button">Next</button> -->
-      </section>
-
-      <!-- Where Back and Next should go for THIS page -->
-      <body data-back="./template.html" data-next="./template.html">
-      </main>
-
-    <!-- footer -->
-    <!-- <footer class="footer"> -->
-      <!-- <button class="pill-button"><a href="./contact-details.html">Back</a></button> -->
-      <!-- <button class="pill-button">Next</button> -->
-    <!-- </footer> -->
+      <div class="back-next-row">
+        <button
+          class="pill-button"
+          id="back-button"
+          data-page="contact-details.html"
+        >
+          Back
+        </button>
+        <button
+          class="pill-button"
+          id="next-button"
+        >
+          Next
+        </button>
+      </div>
+    </main>
   </body>
 </html>

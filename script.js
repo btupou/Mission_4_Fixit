@@ -1,17 +1,28 @@
-console.log('Fixit Mission 4 Connected ✅')
+console.log('Fixit Mission X Connected ✅')
+
+const backButton = document.getElementById('back-button')
+const nextButton = document.getElementById('next-button')
+const backPage = backButton.dataset.page
 
 // Make Back and Next buttons clickable
-document.getElementById('backBtn')?.addEventListener('click', () => {
+document.getElementById('back-button')?.addEventListener('click', () => {
+  console.log(backButton.dataset.page)
   console.log('Back button clicked')
+  window.location.href = backPage
 })
 
-const nextBtn = document.getElementById('nextBtn')
-nextBtn?.addEventListener('click', (e) => {
+nextButton?.addEventListener('click', (e) => {
   console.log('Next button clicked')
   // Prevent form submits if ever placed inside a <form>
-  if (nextBtn.type === 'submit') e.preventDefault()
+  if (nextButton.type === 'submit') e.preventDefault()
   // Reverse selected state: white/green <-> green/white
-  nextBtn.classList.toggle('is-selected')
+  nextButton.classList.toggle('is-selected')
+
+  //check if a page was selected
+  if (selectedPage) {
+    console.log('go to:', selectedPage)
+    window.location.href = selectedPage
+  }
 })
 
 document.querySelectorAll('.circle-button').forEach((button) => {
@@ -20,9 +31,13 @@ document.querySelectorAll('.circle-button').forEach((button) => {
     document
       .querySelectorAll('.circle-button')
       .forEach((btn) => btn.classList.remove('is-selected'))
+
     // Add "is-selected" to the clicked one
     button.classList.add('is-selected')
 
-    console.log('Issue chosen:', button.dataset.issue)
+    selectedPage = button.dataset.page
+    console.log('page selected:', selectedPage)
+
+    // console.log('button chosen:', button.dataset.page)
   })
 })

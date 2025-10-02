@@ -9,6 +9,9 @@ const terms = document.getElementById('terms')
 const form = document.getElementById('createAccount')
 const inputs = form.querySelectorAll('.form-input')
 
+const submitForm = document.getElementById('submit-button')
+const submitButton = submitForm.dataset.page
+
 // validation functions
 function validateName(name) {
   return name.trim().length >= 3
@@ -27,7 +30,9 @@ function validatePhone(phone) {
   return phonePattern.test(phone)
 }
 
-function validatePassword(password) {}
+function validatePassword(password) {
+  return password.trim().length >= 8
+}
 
 // function showError(input) {
 //   console.log(input.id)
@@ -41,7 +46,13 @@ function validatePassword(password) {}
 // position the checkmark icon far right of input box
 // style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"
 
-function showSuccess() {}
+function showSuccess(input) {
+  clearError(input)
+  input.classList.add('success')
+  console.log('Success for:', input.id)
+  console.log(input.classList)
+  // input.classList.remove('error')
+}
 
 function showError(input, message) {
   console.log('Error for:', input.id)
@@ -99,6 +110,43 @@ function clearError(input) {
   clearDiv.classList.remove('show')
 }
 
+// validate form
+function validate(e) {
+  let isValid = true
+
+  const fullname1 = fullName.value
+  const email1 = email.value
+  const phonenumber1 = phonenumber.value
+  const password1 = password.value
+
+  if (!validateName(fullname1)) {
+    isValid = false
+  }
+  if (!validateName(email1)) {
+    isValid = false
+  }
+  if (!validateName(phonenumber1)) {
+    isValid = false
+  }
+  if (!validateName(password1)) {
+    isValid = false
+  }
+
+  console.log('is valid:', isValid)
+
+  console.log(validateName(fullname1))
+  console.log(validateEmail(email1))
+  console.log(validatePhone(phonenumber1))
+  console.log(validatePassword(password1))
+
+  // console.log(submitButton)
+  if (isValid) {
+    window.location.href = submitButton
+  }
+
+  // form inputs
+}
+
 // form inputs
 fullName.addEventListener('input', (e) => {
   const value = e.target.value
@@ -145,4 +193,8 @@ password.addEventListener('input', (e) => {
   } else {
     showError(password, 'Password must be at least 8 characters long')
   }
+})
+
+submitForm.addEventListener('click', (e) => {
+  validate()
 })
