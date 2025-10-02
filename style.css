@@ -10,7 +10,6 @@ a {
   text-decoration: none;
 }
 
-/*  Emma Global Css */
 /* ---------- Page frame & card ---------- */
 :root {
   --fixit-green: #4dc971;
@@ -27,7 +26,9 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  width: 393px;
+  align-items: center;
+  min-width: 393px;
+  max-width: 1024px;
   min-height: 742px;
   margin: 0 auto 24px;
   background: #fff;
@@ -36,21 +37,37 @@ body {
   padding-bottom: 18px;
 }
 
-/* navbar / contents and button css */
+/* Responsive card */
+@media (min-width: 768px) {
+  .card {
+    min-height: 900px;
+  }
+}
 
+@media (min-width: 1024px) {
+  .card {
+    min-height: 1000px;
+  }
+  .content-column {
+    width: 900px;
+  }
+}
+
+/* navbar / contents and button css */
 .navbar {
+  margin: 0 auto;
+  border-radius: 12px 12px 0 0;
   display: flex;
   justify-content: space-between;
-  /* align-content: center; */
   background-color: var(--fixit-green);
-  /* padding: 10px; */
-  width: 393px;
+  min-width: 393px;
+  max-width: 1024px;
   height: 110px;
 }
 
 .h2 {
   color: var(--fixit-green);
-  font-size: 20;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -79,6 +96,7 @@ body {
   font-style: normal;
   font-weight: 700;
   cursor: pointer;
+  margin: 0 20px 0 20px;
 }
 
 .circle-button-cta {
@@ -103,14 +121,40 @@ body {
 .circle-button-cta:hover {
   cursor: pointer;
 }
+.circle-button.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
 
 .content {
   display: flex;
-  /* justify-content: center; */
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   justify-content: space-around;
   text-align: center;
-  width: 393px;
+  min-width: 393px;
+  max-width: 60%;
   padding: 20px;
+  /* overflow: hidden; */
+  /* word-wrap: break-word; */
+  /* overflow-wrap: break-word; */
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  min-width: 393px;
+  max-width: 60%;
+  padding: 20px;
+  /* overflow: hidden; */
+  /* word-wrap: break-word; */
+  /* overflow-wrap: break-word; */
 }
 
 .pill-button {
@@ -153,7 +197,7 @@ body {
 
 .account-pill-button {
   display: flex;
-  width: 320px;
+  min-width: 320px;
   height: 56px;
   border-radius: 20px;
   border: 2px solid var(--fixit-green);
@@ -195,8 +239,10 @@ body {
 }
 
 .back-next-row {
-  margin-top: auto;
   display: flex;
+  min-width: 393px;
+  max-width: 1024px;
+  margin-top: auto;
   justify-content: space-between;
   padding-left: 22px;
   padding-right: 22px;
@@ -232,6 +278,27 @@ body {
   justify-self: center;
 }
 
+.form-area button {
+  font-size: 18px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: white;
+  /* border: var(--fixit-green); */
+  border-radius: 20px;
+  padding: 4px 12px 4px 12px;
+  /* color: var(--fixit-green); */
+  box-shadow: var(--shadow);
+}
+
+.form-area button:hover {
+  background-color: #f6fdf8;
+  cursor: pointer;
+}
+
+/* pill-button-small-stretch  */
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -243,22 +310,51 @@ body {
   width: 100%;
   height: 40px;
   border-radius: 20px;
-  border: none;
+  border: 2px solid transparent;
   margin-top: 8px;
   padding-left: 8px;
   font-size: 18px;
+  transition: border-color 0.3s ease;
 }
+
+.error-message {
+  color: #ff4444;
+  font-size: 18px;
+  /* margin-top: 8px; */
+  display: none;
+}
+
+.error-message.show {
+  color: #ff4444;
+  /* font-size: 18px; */
+  /* margin-top: 8px; */
+  display: block;
+}
+
+.form-input.error {
+  border-color: #ff4444;
+  /* background-color: #fff5f5; */
+  background-color: #ffdbdb;
+}
+
+.form-input.success {
+  border-color: var(--fixit-green);
+  background-color: #f0f9f2;
+}
+
+/* .error-message {
+  font-family: 'poppins-regular', sans-serif;
+  font-weight: 500;
+  color: #ff4444;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-left: 8px;
+} */
 
 /* Emma CSS */
 /* Emma CSS */
 /* Emma CSS */
 /* Emma CSS */
-
-.navbar {
-  margin: 0 auto;
-  border-radius: 12px 12px 0 0;
-  width: 393px;
-}
 
 .step-caption {
   width: 393px;

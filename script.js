@@ -14,12 +14,11 @@ nextBtn?.addEventListener('click', (e) => {
   nextBtn.classList.toggle('is-selected')
 })
 
-// Make the 6 cirle buttons clickable
-document.querySelectorAll('.issue-btn').forEach((button) => {
+document.querySelectorAll('.circle-button').forEach((button) => {
   button.addEventListener('click', () => {
     // Remove "is-selected" from all buttons
     document
-      .querySelectorAll('.issue-btn')
+      .querySelectorAll('.circle-button')
       .forEach((btn) => btn.classList.remove('is-selected'))
     // Add "is-selected" to the clicked one
     button.classList.add('is-selected')
