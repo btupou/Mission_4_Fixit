@@ -1,5 +1,9 @@
 console.log('Fixit Form Connected ✅')
 
+// this code lets the user know if the input in the current form is valid
+// on clicking the register button it performs a validity check
+// if the form is valid the user will be successfully registered
+
 const fullName = document.getElementById('fullName')
 const email = document.getElementById('email')
 const phonenumber = document.getElementById('pnumber')
@@ -24,7 +28,6 @@ function validateEmail(email) {
 }
 
 function validatePhone(phone) {
-  // 8 (landline) 9, 10 (mobile)
   // https://stackoverflow.com/questions/9850428/regular-expression-to-validate-new-zealand-phone-numbers
   const phonePattern = /^[\d\s\-\+\(\)]{10,}$/
   return phonePattern.test(phone)
@@ -33,18 +36,6 @@ function validatePhone(phone) {
 function validatePassword(password) {
   return password.trim().length >= 8
 }
-
-// function showError(input) {
-//   console.log(input.id)
-//   errorDiv = document.getElementById('nameError')
-//   // errorDiv = document.getElementById('emailError')
-//   // errorDiv = document.getElementById('phoneError')
-//   // errorDiv = document.getElementById('passwordError')
-//   // errorDiv.textContent = 'help'
-// }
-
-// position the checkmark icon far right of input box
-// style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"
 
 function showSuccess(input) {
   clearError(input)
@@ -97,10 +88,7 @@ function clearError(input) {
   }
 
   const clearDiv = document.getElementById(clearDivId)
-  // console.log(clearDivId)
   console.log(clearDiv)
-  // console.log(clearDivId.classList)
-  // console.log(document.getElementById(clearDivId))
 
   // remove error styling from input
   input.classList.remove('error')
@@ -119,6 +107,8 @@ function validate(e) {
   const phonenumber1 = phonenumber.value
   const password1 = password.value
 
+  // check if each part of the form is valid
+  // if something is not valid the "is valid" check will fail
   if (!validateName(fullname1)) {
     isValid = false
   }
@@ -132,8 +122,8 @@ function validate(e) {
     isValid = false
   }
 
+  // validity console logs
   console.log('is valid:', isValid)
-
   console.log(validateName(fullname1))
   console.log(validateEmail(email1))
   console.log(validatePhone(phonenumber1))
@@ -143,9 +133,12 @@ function validate(e) {
   if (isValid) {
     window.location.href = submitButton
   }
-
-  // form inputs
 }
+
+// form input validity check
+// if the input is empty "" the error and success is cleared
+// input is not valid? show error
+// input is valid! show success
 
 // form inputs
 fullName.addEventListener('input', (e) => {
@@ -195,6 +188,8 @@ password.addEventListener('input', (e) => {
   }
 })
 
+// listen to submit form button
+// run the validate function
 submitForm.addEventListener('click', (e) => {
   validate()
 })

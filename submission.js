@@ -1,6 +1,8 @@
-console.log('submission js connected 😂')
+console.log('submission js connected')
 // icon change on click interaction
 // copy to clipboard api
+// lets the user copy their issue reference code to clipboard to use in the future for tracking
+// visually change the icon afterwards to let the user know whats happened
 
 const iconContainer = document.getElementById('icon-container')
 const referenceNumber = document.getElementById('reference-number')
