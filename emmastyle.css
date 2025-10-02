@@ -6,11 +6,55 @@
   font-style: normal;
 }
 
+/* ✅ Make layout fully responsive using media queries.
+   Base container width for phones, grows at 600px and 900px */
+:root {
+  --container-max: 393px;      /* small screens */
+}
+
+@media (min-width: 600px) {
+  :root { --container-max: 720px; }   /* tablets and up */
+}
+
+@media (min-width: 900px) {
+  :root { --container-max: 960px; }   /* desktops and up */
+}
+
+/* ---------- Page frame & card/white screen ---------- */
+:root {
+  --fixit-green: #4dc971;
+  --rail: #cfcfcf;
+  --bg: #f3f4f5;
+  --shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}   /* ✅ c
+
+/* ✅ Center the address input under the map */
+.address-box,
+.extra-info,
+#address-input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.address-box input,
+#address-input {
+  margin: 0 auto;
+  max-width: 350px; 
+  width: 90%;       
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   background-color: #4dc971;
-  width: 393px;
+  width: min(100%, var(--container-max));
   height: 110px;
 }
 
@@ -64,7 +108,7 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-  width: 393px;
+  width: min(100%, var(--container-max));
   padding: 20px;
 }
 
@@ -95,7 +139,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 393px;
+  width: min(100%, var(--container-max));
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -108,18 +152,11 @@
 .steps {
   display: flex;
   justify-content: center;
-  width: 393px;
+  width: min(100%, var(--container-max));
   margin-top: 18px;
 }
 
 /* ---------- Page frame & card/white screen ---------- */
-:root {
-  --fixit-green: #4dc971;
-  --rail: #cfcfcf;
-  --bg: #f3f4f5;
-  --shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
-}
-
 html,
 body {
   background: var(--bg);
@@ -128,11 +165,11 @@ body {
 .navbar {
   margin: 0 auto;
   border-radius: 12px 12px 0 0;
-  width: 393px;
+  width: min(100%, var(--container-max));
 }
 
 .step-caption {
-  width: 393px;
+  width: min(100%, var(--container-max));
   margin: 10px auto 6px;
   color: #b6b6b6;
   font-size: 14px;
@@ -142,8 +179,8 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  width: 393px;
-  min-height: 742px;
+  width: min(100%, var(--container-max));
+  min-height: 540px; /* flexible height */
   margin: 0 auto 24px;
   background: #fff;
   border-radius: 12px;
@@ -173,11 +210,12 @@ body {
   width: 100%;
   padding: 10px 18px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;   
   grid-auto-rows: 130px;
   gap: 22px;
   justify-items: center;
 }
+
 
 /* Turn icon white when the button is selected */
 .issue-btn.is-selected img.btn-icon {
@@ -307,6 +345,18 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* styling for fieldset, radio groups and text area */
+.choice-fieldset { border: 0; padding: 0; margin: 0; }
+.choice-fieldset > .question { margin: 0 0 8px; }
+
+/* ✅ Center the main question inside fieldset legends */
+.choice-fieldset legend.question {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem; 
+}
+
+
 /* selected state for circle button: green bg + white text */
 .circle-button.is-selected {
   background-color: var(--fixit-green);
@@ -325,12 +375,80 @@ body {
   padding: 0 18px;
 }
 
-.choice-grid {
+/* Center the option groups and keep them the same width as text areas 🌟🌟🌟 */
+.choice-grid{
+  width: min(680px, 90%);
+  margin: 10px auto 18px;          
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px 24px;
-  margin: 10px 0 18px;
+  grid-template-columns: 1fr 1fr;  
+  column-gap: 24px;
+  row-gap: 14px;
+  justify-items: start;            
+  padding-left: 40px
 }
+
+/* Push only the right-hand column further right */
+.choice-grid label:nth-child(2n) {
+  padding-left: 20px;   
+}
+
+/* About page: stack Yes/No perfectly and lock dot alignment */
+body#emmabout .choice-grid {
+  display: flex;
+  flex-direction: column;     
+  align-items: center;        
+  gap: 4px;                   
+  width: 100%;
+  margin: 10px auto 18px;
+}
+
+/* About page: stack Yes/No perfectly and lock dot alignment 🌟🌟🌟*/
+body#emmabout .choice-grid {
+  display: flex;
+  flex-direction: column;     
+  align-items: center;        
+  gap: 4px;                   
+  width: 100%;
+  margin: 10px auto 18px;
+}
+
+body#emmabout .choice-grid .choice {
+  display: inline-flex;       /* keep dot + text side by side */
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 120px;           
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+body#emmabout .choice-grid .dot {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 2px solid var(--fixit-green, #4dc971);
+  border-radius: 50%;
+  background: #fff;
+  box-sizing: border-box;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+/* ✅ Fill the circle green when selected */
+body#emmabout .choice-grid input[type="radio"]:checked + .dot {
+  background: var(--fixit-green, #4dc971);
+  border-color: var(--fixit-green, #4dc971);
+}
+
+body#emmabout .choice-grid input[type="radio"]:checked + .dot + .choice-text {
+  font-weight: 700;
+  color: #222;
+}
+
+.extra-info .question {
+  padding: 0 20px;
+}
+
 
 .choice {
   display: inline-flex;
@@ -347,16 +465,22 @@ body {
   pointer-events: none;
 }
 
-/* circle outline for radio buttons */
+/* circle outline for radio/checkbox buttons – locked size */
 .choice .dot {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;                        
   border: 2px solid var(--fixit-green, #4dc971);
   background: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  display: inline-block;                      
+  line-height: 0;                             
+  vertical-align: middle;
+  flex: 0 0 20px;                              
   transition: background 0.15s ease, border-color 0.15s ease;
 }
+
 
 /* green when selected */
 .choice input[type="radio"]:checked + .dot {
@@ -375,8 +499,6 @@ body {
 }
 
 /* ===== Consistent text sizing for all pages ===== */
-
-/* Base size for all body text */
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -418,7 +540,7 @@ body#home_page .issue-grid.issue-grid--actions {
   min-height: 400px;
 }
 
-/* Fixed screen size for all pages === */
+/* Responsive page layout: full-height body, centered card, flexible width */
 html,
 body {
   height: 100%;
@@ -434,10 +556,10 @@ body {
   align-items: center;
 }
 
-/* Fixed heigh and width for screen below nav bar */
+/* Fixed height and width for screen below nav bar
+   updated to responsive width & flexible height */
 .card {
-  width: 393px;
-  height: calc(742px - 110px);
+  width: min(100%, var(--container-max));
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -458,12 +580,8 @@ body {
   justify-content: space-between;
 }
 
-/* Move Yes/No radio group slightly to the right on the About page only */
-body#emmabout .choice-grid {
-  margin-left: 50px;   
-}
 
-/* === Allow multiple selections but keep the round dot look === */
+/* === Allow multiple selections but keep the round dot look 🌟🌟=== */ 
 .choice input[type="checkbox"] {
   position: absolute;
   opacity: 0;
@@ -479,3 +597,140 @@ body#emmabout .choice-grid {
   font-weight: 700;
   color: #222;
 }
+
+/* =========================================================
+   ✅ Using JavaScript to create 3 meaningful interactions:
+   Image preview – styles for preview box & errors
+   ========================================================= */
+.photo-preview {
+  margin-top: 12px;
+  padding: 10px;
+  border: 2px dashed var(--fixit-green, #4dc971);
+  border-radius: 12px;
+  background: #fafafa;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;   
+  overflow: hidden;
+}
+.photo-preview img {
+  display: block;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.photo-error { margin-top: 8px; color: #b00020; font-weight: 600; }
+.remove-photo {
+  border: 2px solid var(--fixit-green, #4dc971);
+  background: #fff;
+  color: #222;
+  border-radius: 20px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.remove-photo:hover,
+.remove-photo:focus-visible {
+  background: #f0fff6;
+  outline: 3px solid #0a7f46;
+  outline-offset: 2px;
+}
+
+/* ✅ Using JavaScript to create 3 meaningful interactions:
+   Replace "Choose files" button with clickable icon */
+.upload-icon-label {
+  display: inline-block;
+  cursor: pointer;
+}
+.upload-icon {
+  width: 50px;        
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.upload-icon-label:hover .upload-icon {
+  transform: scale(1.05);
+}
+
+/* ✅ Geolocation map styling */
+.map-wrap {
+  padding: 12px 18px;
+}
+#map {
+  width: 100%;
+  height: 240px;      
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* ✅ Center the Locate Me button like other circle buttons */
+#locateBtn.circle-button.issue-btn {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* ✅ Bug fix: Leaflet needs a fixed height to render */
+#map { height: 320px; min-height: 320px; border-radius: 12px; overflow: hidden; }
+.leaflet-container img { max-width: none !important; }
+
+/* ✅ Bug fix: make character counter turn red when limit (200+) is exceeded */
+#char-count.count-error {
+  color: #d00;
+  font-weight: 600;
+}
+textarea.over-limit,
+.over-limit {
+  border: 2px solid #d00;
+  outline: 0;
+}
+
+
+
+/* ✅ Center the description/notes box on wide screens */
+.extra-info {
+  /* center the whole section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;        
+  gap: 8px;
+}
+
+.extra-info textarea {
+  /* center and style box it */
+  display: block;
+  width: min(680px, 90%);
+  max-width: 680px;
+  margin: 0 auto;            
+}
+
+/* put the character message below the box */
+.extra-info #char-msg {
+  align-self: center;
+  white-space: nowrap;
+  margin-top: 4px;
+}
+
+/* ✅ Bug fix: make character counter turn red when limit (200+) is exceeded */
+#char-count.count-error { 
+  color: #d00 !important;
+  font-weight: 600;
+}
+
+/* Optional: visually flag the textarea when over limit */
+textarea.over-limit, 
+.over-limit {
+  border: 2px solid #d00 !important;
+  outline: 0;
+}
+
+/* ✅ Use basic accessibility features: Focus style: an outline for keyboard users */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #4dc971;
+  outline-offset: 2px;
+}
+

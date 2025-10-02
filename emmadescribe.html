@@ -13,11 +13,11 @@
       rel="stylesheet"
     />
     <script src="emmascript.js" defer></script>
+    <script src="emmageolocation.js" defer></script>
   </head>
 
   <!-- Where back and next buttons take you to -->
   <body id="emmadescribe" data-back="emmawhere.html" data-next="emmabout.html">
-    
     <!-- navbar -->
     <nav class="navbar">
       <img src="./images/hamburger.png" alt="hamburger button" class="button" />
@@ -35,56 +35,66 @@
       <!-- Describe the Location -->
       <section class="intro">
         <h2 class="welcome-title">Describe the Location</h2>
-        <p class="question"><br>What type of surface is the graffiti on</p><br>
       </section>
 
-      <!-- Surface options - round multiple-select circles -->
-      <form class="surface-form" aria-labelledby="surface-title">
-        <div class="choice-grid" id="surface-group">
-          <label class="choice">
-            <input type="checkbox" name="surface" value="sign" />
-            <span class="dot" aria-hidden="true"></span>
-            <span class="choice-text">Sign</span>
-          </label>
+      <!-- Surface options: accessible fieldset + legend + labelled checkboxes -->
+      <form class="surface-form">
+        <fieldset class="choice-fieldset">
+          <legend class="question">What type of surface is the graffiti on?</legend>
 
-          <label class="choice">
-            <input type="checkbox" name="surface" value="art_mural" />
-            <span class="dot" aria-hidden="true"></span>
-            <span class="choice-text">Art or mural</span>
-          </label>
+          <div class="choice-grid" id="surface-group">
+            <label class="choice">
+              <input type="checkbox" name="surface" value="sign" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Sign</span>
+            </label>
 
-          <label class="choice">
-            <input type="checkbox" name="surface" value="road_footpath" />
-            <span class="dot" aria-hidden="true"></span>
-            <span class="choice-text">Road or footpath</span>
-          </label>
+            <label class="choice">
+              <input type="checkbox" name="surface" value="art_mural" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Art or mural</span>
+            </label>
 
-          <label class="choice">
-            <input type="checkbox" name="surface" value="bridge" />
-            <span class="dot" aria-hidden="true"></span>
-            <span class="choice-text">Bridge</span>
-          </label>
+            <label class="choice">
+              <input type="checkbox" name="surface" value="road_footpath" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Road or footpath</span>
+            </label>
 
-          <label class="choice">
-            <input type="checkbox" name="surface" value="wall" />
-            <span class="dot" aria-hidden="true"></span>
-            <span class="choice-text">Wall</span>
-          </label>
+            <label class="choice">
+              <input type="checkbox" name="surface" value="bridge" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Bridge</span>
+            </label>
 
-          <label class="choice">
-            <input type="checkbox" name="surface" value="general" />
-            <span class="dot" aria-hidden="true"></span>
-            <span class="choice-text">General graffiti</span>
-          </label>
-        </div>
+            <label class="choice">
+              <input type="checkbox" name="surface" value="wall" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Wall</span>
+            </label>
 
+            <label class="choice">
+              <input type="checkbox" name="surface" value="general" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">General graffiti</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- ✅ Using JavaScript to create 3 meaningful interactions:
+             (2) Live character counter for extra details -->
         <div class="extra-info">
-          <p class="question"><br><br>Can you add any further information about the location of the issue?</p><br><br>
-          <img
-            src="./images/inputbox_graffiti.png"
-            alt="Example of how to describe the graffiti location"
-            class="details-img"
-          />
+          <label for="details" class="question">Can you add any further information about the location of the issue?</label>
+          <textarea
+            id="details"
+            rows="4"
+            data-max="200"
+            placeholder="For example... the graffiti is painted across the brick wall facing the motorway right before the entrance to Victoria Park."
+          ></textarea>
+          <p class="question">
+            Characters: <span id="char-count">0</span>/200
+            <span id="char-msg" class="count-msg" aria-live="polite"></span>
+          </p>
         </div>
       </form>
 
