@@ -1,4 +1,4 @@
-console.log('Fixit Mission 4 Connected ✅')
+console.log('Fixit Mission X Connected ✅')
 
 const backButton = document.getElementById('back-button')
 const nextButton = document.getElementById('next-button')
@@ -18,9 +18,9 @@ nextButton?.addEventListener('click', (e) => {
   // Reverse selected state: white/green <-> green/white
   nextButton.classList.toggle('is-selected')
 
-  // ✅ Check if a page was selected
+  //check if a page was selected
   if (selectedPage) {
-    console.log('🚀 Navigating to:', selectedPage)
+    console.log('go to:', selectedPage)
     window.location.href = selectedPage
   }
 })

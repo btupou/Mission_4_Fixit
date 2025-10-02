@@ -42,12 +42,12 @@ body {
   .card {
     min-height: 768px;
   }
-  .back-next-row {
+  /* .back-next-row {
     min-width: 640px;
     margin-top: auto;
     padding: 12px 20px;
     display: flex;
-  }
+  } */
 }
 
 @media (min-width: 1024px) {
@@ -57,12 +57,12 @@ body {
   .content-column {
     width: 900px;
   }
-  .back-next-row {
+  /* .back-next-row {
     min-width: 900px;
     margin-top: auto;
     padding: 12px 20px;
     display: flex;
-  }
+  } */
 }
 
 /* navbar / contents and button css */
@@ -252,14 +252,16 @@ body {
 
 .back-next-row {
   display: flex;
-  min-width: 393px;
-  max-width: 1024px;
+  /* min-width: 393px; */
+  /* max-width: 1024px; */
+  width: 100%;
   margin-top: auto;
   justify-content: space-between;
   padding-left: 22px;
   padding-right: 22px;
 }
 
+/* form css */
 .form {
   display: flex;
   /* padding-left: 10%; */
@@ -309,8 +311,6 @@ body {
   cursor: pointer;
 }
 
-/* pill-button-small-stretch  */
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -351,14 +351,6 @@ body {
 
 .form-input.success {
   border-color: var(--fixit-green);
-  background-color: #f0f9f2;
+  /* background-color: #f0f9f2; */
+  /* background-color: var(--fixit-green); */
 }
-
-/* .error-message {
-  font-family: 'poppins-regular', sans-serif;
-  font-weight: 500;
-  color: #ff4444;
-  font-size: 16px;
-  margin-top: 8px;
-  margin-left: 8px;
-} */
