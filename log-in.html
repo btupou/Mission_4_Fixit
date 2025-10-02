@@ -25,6 +25,10 @@
       rel="stylesheet"
     />
     <script
+      src="script.js"
+      defer
+    ></script>
+    <script
       src="form.js"
       defer
     ></script>
@@ -135,7 +139,13 @@
 
       <!-- back / next button -->
       <section class="back-next-row">
-        <button class="pill-button">Cancel</button>
+        <button
+          id="back-button"
+          class="pill-button"
+          data-page="contact-details.html"
+        >
+          Cancel
+        </button>
         <button class="pill-button">Log In</button>
       </section>
     </main>

@@ -42,6 +42,12 @@ body {
   .card {
     min-height: 768px;
   }
+  .back-next-row {
+    min-width: 640px;
+    margin-top: auto;
+    padding: 12px 20px;
+    display: flex;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -50,6 +56,12 @@ body {
   }
   .content-column {
     width: 900px;
+  }
+  .back-next-row {
+    min-width: 900px;
+    margin-top: auto;
+    padding: 12px 20px;
+    display: flex;
   }
 }
 
